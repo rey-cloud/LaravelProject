@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\usersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sql', 'userss@index');
+Route::get('/users', [usersController::class, 'index']);
+
